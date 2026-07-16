@@ -1,0 +1,455 @@
+
+ body{
+ background-color :#050607;
+ color: #f9f7f4;
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Adjusted to a valid numeric weight */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  word-spacing: 9px;
+}
+
+.navbar a{
+    font-size: 18px;
+color: #f9f7f4;
+text-decoration:none;
+margin: 20px;
+padding: 20px;
+ }
+.navbar{
+   display: flex;
+   justify-content: center;
+  padding: 15px;
+}
+#contact{
+    background-color: rgb(4, 121,4);
+    border-radius: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#header{
+ color: #f9f7f4;
+ text-align: center;
+
+ margin-top: 80px;
+
+
+}
+#sectionimg img{
+width: 20%;
+height: auto;
+
+
+}
+#sectionimg{
+text-align: center;
+margin-bottom: 80px;
+}
+
+#welcome{
+    text-align: center;
+    padding-bottom: 20px;
+
+
+}
+
+
+#aboutMe{
+
+    padding:30px;
+  text-align: center;
+    color: #f9f7f4;
+    margin: 30px;
+
+}
+#headaboutme {
+    color: rgb(6, 136, 6);
+    font-size: 24px;
+}
+
+
+
+/* Section styling */
+#skills {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#skills h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #f9f7f4;
+  margin-bottom: 30px;
+}
+
+/* Reset the list styling and set up the grid */
+.skills-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px; /* Space between cards */
+
+  /* DEFAULT: Mobile layout (2 cards per row) */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Individual Card Styling */
+.skills-grid li {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px ;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef2f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:70%;
+}
+
+/* Card Hover Effects */
+.skills-grid li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image/Icon adjustments */
+.skills-grid li img {
+  width:30%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Card Title text */
+.skills-grid li h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+#email{
+text-align: start;
+}
+
+
+/* Container spacing */
+#projectSection {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Spacing between each standalone card */
+}
+
+#projectSection h2 {
+    text-align: center;
+    color: #0ea236;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Base Card Styling (Mobile-first) */
+.project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1100px; /* Limits how wide it gets on massive screens */
+    display: flex;
+    flex-direction: column; /* Stacks image on top of text on mobile */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle hover effect to make it feel premium */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Image Handling */
+.project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Prevents the image from stretching/distorting */
+}
+
+/* Content Layout */
+.project-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: #222;
+    margin: 0;
+}
+
+.project-description {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Button Styling */
+.project-btn {
+    align-self: flex-start; /* Keeps the button tight around its text */
+    background-color: #24292e; /* GitHub dark grey color */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.project-btn:hover {
+    background-color: #444;
+}
+
+/* --- Responsive Media Query for Larger Screens --- */
+@media (min-width: 768px) {
+    .project-card {
+        flex-direction: row; /* Puts image on the left, text on the right */
+        height: 300px;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .project-image {
+        width: 40%; /* Image takes up 40% of the card width */
+        height: 100%;
+    }
+
+    .project-content {
+        width: 60%; /* Content takes up the remaining 60% */
+        justify-content: center; /* Centers items vertically inside the card text area */
+    }
+}
+
+
+/* MEDIA QUERY: Laptop/Desktop layout (3 cards per row) */
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Gives laptop screens slightly more breathing room */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Only triggers on mobile screens */
+@media (max-width: 768px) {
+
+  /* 1. Set up the navbar container to hold the burger icon */
+  .navbar {
+    position: relative;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: black; /* Change to match your background color */
+  }
+
+  /* 2. Create the Hamburger lines out of thin air */
+  .navbar::before,
+  .navbar::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 28px;
+    width: 45px;
+    height: 4px;
+    background-color: white; /* Change to match your text color */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  /* Create the middle bar using a box shadow */
+  .navbar::before {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 0 white; /* Change 'white' to match your text color */
+  }
+
+  .navbar::after {
+    transform: translateY(10px);
+  }
+
+  /* 3. Style the hidden menu container */
+  .navbar > div {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Aligns right under the navbar */
+    left: 0;
+    width: 100%;
+    background-color: black; /* Match your navbar background */
+    padding: 10px 0;
+  }
+
+  /* Stack the links vertically */
+  .navbar > div a {
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* --- ACTIVE STATES (When javascript toggles 'mobile-open') --- */
+
+  /* Show the menu links */
+  .navbar.mobile-open > div {
+    display: flex;
+  }
+
+  /* Animate the burger into an X */
+  .navbar.mobile-open::before {
+    transform: translateY(0) rotate(45deg);
+    box-shadow: none; /* Deletes the middle bar */
+  }
+
+  .navbar.mobile-open::after {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+
+/* image scalling */
+
+#sectionimg img{
+    width: 40%;
+    height: auto;
+}
+
+
+/* header design */
+
+#header {
+    color: #f9f7f4;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+#paragraph{
+  text-align: left;
+       /* Aligns the actual lines of text from left-to-right */
+  max-width: 700px;       /* Constrains the text width so it doesn't stretch too wide */
+  margin: 0 auto;         /* Perfectly centers the text block on the screen */
+  padding: 0 20px;
+  font-size: 1rem;
+}
+
+
+
+
+.skills-grid {
+  display: grid;
+
+  /* 1. This centers the actual columns horizontally inside the screen */
+  justify-content: center;
+
+  /* 2. This aligns the content inside each individual card (optional but helpful) */
+  justify-items: center;
+
+  /* Your existing grid-template-columns, gap, etc. go here */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Example */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Centers the list block itself if it has a max-width */
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+#email {
+  background-color: black; /* Your green background */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact-footer {
+  display: flex;
+  gap: 50px; /* Generous spacing between email and phone */
+  justify-content: center;
+  flex-wrap: wrap; /* Stacks smoothly on mobile screens */
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Style for the link containers */
+.contact-box {
+  text-decoration: none; /* Removes default underline */
+  display: flex;
+  flex-direction: column; /* Puts label on top of the value */
+  align-items: flex-start; /* Aligns text left */
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+/* Small, elegant label */
+.contact-label {
+  color: rgba(255, 255, 255, 0.7); /* Soft white so it doesn't compete with the main text */
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+/* Bold, clear value text */
+.contact-value {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Subtle baseline */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect: The underline brightens up and expands slightly */
+.contact-box:hover .contact-value {
+  border-bottom: 2px solid #ffffff;
+  color: #e0f2f1; /* Slight soft glow color shift */
+}
+
+.contact-box:hover {
+  transform: translateY(-2px); /* Gentle lift */
+}
