@@ -176,9 +176,10 @@ text-align: start;
 
 /* Responsive Image Handling */
 .project-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover; /* Prevents the image from stretching/distorting */
+    width: 50%;
+    height: 200px;
+    margin: 3px;
+     /* Prevents the image from stretching/distorting */
 }
 
 /* Content Layout */
@@ -227,7 +228,7 @@ text-align: start;
     }
 
     .project-image {
-        width: 40%; /* Image takes up 40% of the card width */
+        width: 25%; /* Image takes up 40% of the card width */
         height: 100%;
     }
 
@@ -453,3 +454,4 @@ text-align: start;
 .contact-box:hover {
   transform: translateY(-2px); /* Gentle lift */
 }
+
